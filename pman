@@ -1,0 +1,8 @@
+#!/bin/bash
+
+exe(){
+    dic=~/your-path/pman.py
+    python3 $dic $@ 2>/dev/null | less
+}
+
+exe $@
