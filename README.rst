@@ -12,7 +12,7 @@ You can also use pman on emacs by setting emacs.
 ==================================                
 
 -----------------------------------
-Image Image of using pman on emacs
+Image of using pman on emacs
 -----------------------------------
 .. image:: ./pman.png                      
    :scale: 40%                                          
