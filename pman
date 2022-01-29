@@ -1,8 +1,13 @@
 #!/bin/bash
 
 exe(){
-    dic=~/your-path/pman.py
-    python3 $dic $@ 2>/dev/null | less
+    file=$(mktemp)
+    python3 $path $1 $2 > $file
+    cat -s $file | less
+    rm $file
 }
 
-exe $@
+path=~/"your path"/pman.py
+arg=$1;shift
+module_name=$1;shift
+exe $arg $module_name
