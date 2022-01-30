@@ -16,7 +16,7 @@ If you want to use pman on emacs, refer to **pman.el** to write *Emacs lisp*.
 -----------------------------------
 Image of using pman on emacs
 -----------------------------------
-.. image:: ./pman.png                      
+.. image:: ./image/pman.png                      
    :scale: 40%                                          
    :height: 100px                                       
    :width: 200px                                        

@@ -6,7 +6,6 @@
 # $Id: pman.py,v 1.32 2020/03/25 07:50:31 suzuki
 
 import urllib.request
-from perlcompat import getopts
 from bs4 import BeautifulSoup
 import time
 import argparse
