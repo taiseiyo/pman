@@ -1,0 +1,85 @@
+# -*- Org -*-
+#+title: dummy
+
+#+startup: beamer                                       
+#+latex_class: beamer                                   
+#+latex_class_options: [compress,dvipdfmx,11pt]         
+#+options: h:2 toc:nil        
+#+beamer_theme: Ohsaki  
+#+beamer_header: \title[2022年度 2月Debian勉強会]{\bf Debian で始める Python Programming}
+#+beamer_header: \author[]{taiseiyo}
+#+beamer_header: \institute{Mail Address: taiseiyo11@gmail.com}
+#+beamer_header: \usepackage{amsmath}                   
+#+beamer_header: \setlength{\parskip}{1.5ex}            
+#+beamer_header: \renewcommand{\textbf}{\alert}  
+#+beamer_header: \date{2022年2月19日}
+
+
+\newcommand{\pivec}{\mathbf \pi}
+\newcommand{\xvec}{\mathbf x}
+\newcommand{\yvec}{\mathbf y}
+\newcommand{\zvec}{\mathbf z}
+\newcommand{\Emat}{\mathbf E}
+\newcommand{\Imat}{\mathbf I}
+
+* 概要
+** Python とは？
+
+Python(パイソン)はオブジェクト指向のプログラミング言語であり、手軽に始
+める事ができ実用的な本格的なプログラムの開発を行う事が可能
+
+言語ランキング(TIOBE Software 調べ)：1位
+https://www.tiobe.com/tiobe-index/
+
+最新の安定バージョン：3.10.2
+本日のソース一式：
+
+* Python 環境作成
+** Python 導入：apt install を使う(Debian)
+メリット
+- インストールが簡単
+#+begin_src bash
+  sudo apt install python3 python3-pip
+#+end_src
+
+デメリット
+- バージョンが古い
+  - バージョン 3.10 以降は文法チェッカーが優秀(https://www.python.org/dev/peps/pep-0626/)
+  - buster(debian 10.x 系)
+    - python3.7
+  - bullseye(debian 11.x 系)
+    - python3.9
+      
+\vspace{-2truemm}      
+#+begin_src bash
+cat /etc/os-release or cat /etc/debian_version
+#+end_src
+
+** Python 導入：source からビルド
+メリット
+- 最新バージョンが手に入る
+デメリット
+- 手間がかかる(シェルでまとめておくと便利)
+#+begin_src bash 
+  wget https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tar.xz
+  tar Jxfv Python-3.10.2.tar.xz
+  cd Python-3.10.2
+  ./configure
+  sudo make # ディレクトリのpythonが使用可能になる
+  # PATH が通っている所のPython を置き変える場合
+  sudo make altinstall
+#+end_src 
+
+
+
+* pman command
+** pman コマンド
+発想
+- Debian なら man コマンドがあるが、同じ事を Python でも行いたい
+- いつでもモジュールのマニュアルが欲しい
+
+* 実践(ハンズオン)
+** ソース一式
+
+* 最後に
+** 最後に
