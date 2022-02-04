@@ -104,6 +104,12 @@ pman 作成の環境構築($/pman/prog/$ の想定)
 #+end_src
 
 ** 実践：プログラム作成
+HTML 取得
+  - urllib.request.urlopen()
+
+
+HTML 解析
+  - BeautifulSoup()
 
 * 最後に
 ** 最後に
