@@ -1,4 +1,4 @@
-% Created 2022-02-04 Fri 20:15
+% Created 2022-02-04 Fri 20:39
 % Intended LaTeX compiler: pdflatex
 \documentclass[compress,dvipdfmx,11pt]{beamer}
 \usepackage[utf8]{inputenc}
@@ -41,21 +41,25 @@
 \newcommand{\Imat}{\mathbf I}
 
 \section{概要}
-\label{sec:org4880c8b}
-\begin{frame}[label={sec:org89c1bda}]{Python とは？}
+\label{sec:orgd6258a1}
+\begin{frame}[label={sec:orge39e6a9}]{Python とは？}
 Python(パイソン)はオブジェクト指向のプログラミング言語であり、手軽に始
 める事ができ実用的な本格的なプログラムの開発を行う事が可能
+
 
 言語ランキング(TIOBE Software 調べ)：1位
 \url{https://www.tiobe.com/tiobe-index/}
 
+
 最新の安定バージョン：3.10.2
+
+
+本日のソース一式：\url{https://github.com/taiseiyo/pman/tree/debian}
 \end{frame}
 
-
 \section{Python 環境作成}
-\label{sec:org5623bdc}
-\begin{frame}[label={sec:org61bc9a9},fragile]{Python 導入：apt install を使う(Debian)}
+\label{sec:orgc70a84c}
+\begin{frame}[label={sec:orgfb28f47},fragile]{Python 導入：apt install を使う(Debian)}
  メリット
 \begin{itemize}
 \item インストールが簡単
@@ -69,16 +73,11 @@ sudo apt install python3 python3-pip
 \item バージョンが古い
 \begin{itemize}
 \item バージョン 3.10 以降は文法チェッカーが優秀(\url{https://www.python.org/dev/peps/pep-0626/})
-\item buster(debian 10.x 系)
-\begin{itemize}
-\item python3.7
-\end{itemize}
-\item bullseye(debian 11.x 系)
-\begin{itemize}
-\item python3.9
+\item buster(debian 10.x 系) → python 3.7
+\item bullseye(debian 11.x 系) → python 3.9
 \end{itemize}
 \end{itemize}
-\end{itemize}
+
 
 \vspace{-2truemm}      
 \begin{verbatim}
@@ -86,7 +85,7 @@ cat /etc/os-release or cat /etc/debian_version
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:orgeeaaa14},fragile]{Python 導入：source からビルド}
+\begin{frame}[label={sec:orgbff4f23},fragile]{Python 導入：source からビルド}
  メリット
 \begin{itemize}
 \item 最新バージョンが手に入る
@@ -103,24 +102,58 @@ cd Python-3.10.2
 sudo make # ディレクトリの python が使用可能になる
 # PATH が通っている所の Python を置き変える場合
 sudo make altinstall
-
 \end{verbatim}
 \end{frame}
 
 
 
 \section{pman command}
-\label{sec:org4d68dd9}
-\begin{frame}[label={sec:orgca1f2f0}]{pman コマンド}
+\label{sec:orgd60c2b1}
+\begin{frame}[label={sec:org5201310}]{pman コマンド}
+発想
+\begin{itemize}
+\item Debian なら man コマンドがあるが、同じ事を Python でも行いたい
+\item いつでもモジュールのマニュアルが欲しい
+\end{itemize}
+
+手法
+\begin{enumerate}
+\item Python 公式サイトから標準ライブラリのデータ(HTML)を取得
+\item HTML から文字列を取得
+\end{enumerate}
 \end{frame}
 
+
 \section{実践(ハンズオン)}
-\label{sec:orgc32f493}
-\begin{frame}[label={sec:org91c5849}]{ソース一式}
+\label{sec:orgf9fa3e2}
+\begin{frame}[label={sec:org7be16f3},fragile]{実践：必要なモジュール}
+ \begin{itemize}
+\item beautifulsoup4
+\begin{itemize}
+\item HTML ファイルや XML ファイルからデータを抽出するための Python ライブラリ
+\end{itemize}
+\item lxml
+\begin{itemize}
+\item \url{https://pypi.org/project/lxml/}
+\item Python で xml や html を扱うためのライブラリ。Web サイトの html を
+解析して情報を抽出するプログラムを作成する場合などに多く用いる
+\end{itemize}
+\end{itemize}
+
+pman 作成の環境構築(\(/pman/prog/\) の想定)
+\begin{verbatim}
+python -m venv test
+cd test
+source bin/activate
+pip install -r ../requirements.txt
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org5f9981d}]{実践：プログラム作成}
 \end{frame}
 
 \section{最後に}
-\label{sec:org960491f}
-\begin{frame}[label={sec:orgeb977ef}]{最後に}
+\label{sec:org4ea0c13}
+\begin{frame}[label={sec:orge41d0f7}]{最後に}
 \end{frame}
 \end{document}
