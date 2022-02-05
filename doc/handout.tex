@@ -1,4 +1,4 @@
-% Created 2022-02-05 Sat 18:15
+% Created 2022-02-05 Sat 18:36
 % Intended LaTeX compiler: pdflatex
 \documentclass[compress,dvipdfmx,11pt]{beamer}
 \usepackage[utf8]{inputenc}
@@ -18,7 +18,6 @@
 \title{dummy}
 \title[2022 年度 2 月 Debian 勉強会]{\bf Debian で始める Python Programming}
 \author[]{taiseiyo}
-\institute{Mail Address: taiseiyo11@gmail.com}
 \usepackage{amsmath}
 \setlength{\parskip}{1.5ex}
 \renewcommand{\textbf}{\alert}
@@ -41,8 +40,8 @@
 \newcommand{\Imat}{\mathbf I}
 
 \section{概要}
-\label{sec:orgadf93e9}
-\begin{frame}[label={sec:org2b5783a},fragile]{Python とは？}
+\label{sec:orgbcf19ca}
+\begin{frame}[label={sec:orgc7a21b0},fragile]{Python とは？}
  Python(パイソン)はオブジェクト指向のプログラミング言語であり、手軽に始
 める事ができ実用的な本格的なプログラムの開発を行う事が可能
 
@@ -63,8 +62,8 @@ git clone https://github.com/taiseiyo/pman.git
 \end{frame}
 
 \section{Python 環境作成}
-\label{sec:org2ed1f01}
-\begin{frame}[label={sec:orge594000},fragile]{Python 導入：apt install を使う(Debian)}
+\label{sec:orgccdeb06}
+\begin{frame}[label={sec:org1d73ee1},fragile]{Python 導入：apt install を使う(Debian)}
  メリット
 \begin{itemize}
 \item インストールが簡単
@@ -90,11 +89,13 @@ cat /etc/os-release or cat /etc/debian_version
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org05732a4},fragile]{Python 導入：source からビルド}
+\begin{frame}[label={sec:orgd3e1664},fragile]{Python 導入：source からビルド}
  メリット
 \begin{itemize}
 \item 最新バージョンが手に入る
+\item \url{https://www.python.org/downloads/}
 \end{itemize}
+
 デメリット
 \begin{itemize}
 \item 手間がかかる(シェルでまとめておくと便利)
@@ -114,8 +115,8 @@ sudo make # ディレクトリの python が使用可能になる
 
 
 \section{pman command}
-\label{sec:org7495f5d}
-\begin{frame}[label={sec:org289a139}]{pman コマンド}
+\label{sec:orgbce2de8}
+\begin{frame}[label={sec:org131fd3b}]{pman コマンド}
 発想
 \begin{itemize}
 \item Debian なら man コマンドがあるが、同じ事を Python でも行いたい
@@ -131,8 +132,8 @@ sudo make # ディレクトリの python が使用可能になる
 
 
 \section{実践(ハンズオン)}
-\label{sec:org3e1791a}
-\begin{frame}[label={sec:orgf8688b7},fragile]{実践：必要なモジュール}
+\label{sec:orgab97f37}
+\begin{frame}[label={sec:orgd07209d},fragile]{実践：必要なモジュール}
  \begin{itemize}
 \item beautifulsoup4
 \begin{itemize}
@@ -156,7 +157,7 @@ pip install -r ../requirements.txt
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:orge06c5d7}]{実践：プログラム作成}
+\begin{frame}[label={sec:org1bddfc1}]{実践：プログラム作成}
 HTML 取得
 \begin{itemize}
 \item urllib.request.urlopen()
@@ -167,11 +168,44 @@ HTML 解析
 \begin{itemize}
 \item BeautifulSoup()
 \end{itemize}
+
+
+ソースコード
+\begin{itemize}
+\item 関数を使って実装:  \url{./prog/pman\_func.py}
+\item クラスを使って実装: \url{./prog/pman\_class.py}
+\end{itemize}
 \end{frame}
 
+\begin{frame}[label={sec:org5072e37}]{オマケ}
+emacs との組み合わせ
+\begin{itemize}
+\item emacs と組み合わせる事でエディタ上で Python Manual を見る事ができる
+\begin{itemize}
+\item ソースコード: \url{./prog/pman.el}
+\end{itemize}
+\end{itemize}
+
+結果の表示を見やすく
+\begin{itemize}
+\item HTML から文字列を取得しただけでは空白等が多く見にくいので Shell
+Script(bash)を書いて結果を見やすく
+\begin{itemize}
+\item ソースコード:  \url{./prog/pman}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
 \section{最後に}
-\label{sec:orge8a209d}
-\begin{frame}[label={sec:org0654303}]{最後に}
-GitHub: 
+\label{sec:org3aebd97}
+\begin{frame}[label={sec:orga1e447b}]{最後に}
+ホームページ: \url{https://taiseiyo.com}
+
+
+GitHub: \url{https://github.com/taiseiyo/}
+
+
+Mail Address: taiseiyo11@gmail.com
 \end{frame}
 \end{document}

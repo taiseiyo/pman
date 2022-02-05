@@ -8,7 +8,6 @@
 #+beamer_theme: Ohsaki  
 #+beamer_header: \title[2022年度 2月Debian勉強会]{\bf Debian で始める Python Programming}
 #+beamer_header: \author[]{taiseiyo}
-#+beamer_header: \institute{Mail Address: taiseiyo11@gmail.com}
 #+beamer_header: \usepackage{amsmath}                   
 #+beamer_header: \setlength{\parskip}{1.5ex}            
 #+beamer_header: \renewcommand{\textbf}{\alert}  
@@ -66,6 +65,8 @@ cat /etc/os-release or cat /etc/debian_version
 ** Python 導入：source からビルド
 メリット
 - 最新バージョンが手に入る
+- [[https://www.python.org/downloads/]]
+
 デメリット
 - 手間がかかる(シェルでまとめておくと便利)
 #+begin_src bash 
@@ -117,12 +118,31 @@ HTML 取得
 
 HTML 解析
   - BeautifulSoup()
+    
+
+ソースコード
+  - 関数を使って実装:  [[./prog/pman_func.py]]
+  - クラスを使って実装: [[./prog/pman_class.py]]
 
 ** オマケ
-master ブランチ
+
+emacs との組み合わせ
+- emacs と組み合わせる事でエディタ上で Python Manual を見る事ができる
+  - ソースコード: [[./prog/pman.el]]
+
+結果の表示を見やすく
+- HTML から文字列を取得しただけでは空白等が多く見にくいので Shell
+  Script(bash)を書いて結果を見やすく
+  - ソースコード:  [[./prog/pman]]
+
+  
 * 最後に
 ** 最後に
+
+ホームページ: https://taiseiyo.com
+
 
 GitHub: https://github.com/taiseiyo/
 
 
+Mail Address: taiseiyo11@gmail.com
