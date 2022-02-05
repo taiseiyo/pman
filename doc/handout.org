@@ -36,8 +36,12 @@ https://www.tiobe.com/tiobe-index/
 最新の安定バージョン：3.10.2
 
 
+
 本日のソース一式
-→ git clone https://github.com/taiseiyo/pman.git
+#+begin_src bash
+  git clone https://github.com/taiseiyo/pman.git
+  # debian branchのdoc以下に資料等は置いてます
+#+end_src 
 
 * Python 環境作成
 ** Python 導入：apt install を使う(Debian)
@@ -67,11 +71,12 @@ cat /etc/os-release or cat /etc/debian_version
 #+begin_src bash 
   wget https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tar.xz
   tar Jxfv Python-3.10.2.tar.xz
+  # debian なら tarよりunar がオススメ
   cd Python-3.10.2
   ./configure
   sudo make # ディレクトリのpythonが使用可能になる
   # PATH が通っている所のPython を置き変える場合
-  sudo make altinstall
+  # sudo make altinstall
 #+end_src 
 
 
@@ -113,7 +118,11 @@ HTML 取得
 HTML 解析
   - BeautifulSoup()
 
+** オマケ
+master ブランチ
 * 最後に
 ** 最後に
 
-GitHub: 
+GitHub: https://github.com/taiseiyo/
+
+

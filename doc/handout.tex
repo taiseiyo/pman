@@ -1,4 +1,4 @@
-% Created 2022-02-05 Sat 18:10
+% Created 2022-02-05 Sat 18:15
 % Intended LaTeX compiler: pdflatex
 \documentclass[compress,dvipdfmx,11pt]{beamer}
 \usepackage[utf8]{inputenc}
@@ -41,9 +41,9 @@
 \newcommand{\Imat}{\mathbf I}
 
 \section{概要}
-\label{sec:org62d6f74}
-\begin{frame}[label={sec:orge5ac36d}]{Python とは？}
-Python(パイソン)はオブジェクト指向のプログラミング言語であり、手軽に始
+\label{sec:orgadf93e9}
+\begin{frame}[label={sec:org2b5783a},fragile]{Python とは？}
+ Python(パイソン)はオブジェクト指向のプログラミング言語であり、手軽に始
 める事ができ実用的な本格的なプログラムの開発を行う事が可能
 
 
@@ -54,13 +54,17 @@ Python(パイソン)はオブジェクト指向のプログラミング言語で
 最新の安定バージョン：3.10.2
 
 
+
 本日のソース一式
-→ git clone \url{https://github.com/taiseiyo/pman.git}
+\begin{verbatim}
+git clone https://github.com/taiseiyo/pman.git
+# debian branch の doc 以下に資料等は置いてます
+\end{verbatim}
 \end{frame}
 
 \section{Python 環境作成}
-\label{sec:org17e54c9}
-\begin{frame}[label={sec:org2364cbc},fragile]{Python 導入：apt install を使う(Debian)}
+\label{sec:org2ed1f01}
+\begin{frame}[label={sec:orge594000},fragile]{Python 導入：apt install を使う(Debian)}
  メリット
 \begin{itemize}
 \item インストールが簡単
@@ -86,7 +90,7 @@ cat /etc/os-release or cat /etc/debian_version
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org1002e9e},fragile]{Python 導入：source からビルド}
+\begin{frame}[label={sec:org05732a4},fragile]{Python 導入：source からビルド}
  メリット
 \begin{itemize}
 \item 最新バージョンが手に入る
@@ -98,19 +102,20 @@ cat /etc/os-release or cat /etc/debian_version
 \begin{verbatim}
 wget https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tar.xz
 tar Jxfv Python-3.10.2.tar.xz
+# debian なら tar より unar がオススメ
 cd Python-3.10.2
 ./configure
 sudo make # ディレクトリの python が使用可能になる
 # PATH が通っている所の Python を置き変える場合
-sudo make altinstall
+# sudo make altinstall
 \end{verbatim}
 \end{frame}
 
 
 
 \section{pman command}
-\label{sec:org75031ef}
-\begin{frame}[label={sec:orge536224}]{pman コマンド}
+\label{sec:org7495f5d}
+\begin{frame}[label={sec:org289a139}]{pman コマンド}
 発想
 \begin{itemize}
 \item Debian なら man コマンドがあるが、同じ事を Python でも行いたい
@@ -126,8 +131,8 @@ sudo make altinstall
 
 
 \section{実践(ハンズオン)}
-\label{sec:org97355ac}
-\begin{frame}[label={sec:orgb2bb603},fragile]{実践：必要なモジュール}
+\label{sec:org3e1791a}
+\begin{frame}[label={sec:orgf8688b7},fragile]{実践：必要なモジュール}
  \begin{itemize}
 \item beautifulsoup4
 \begin{itemize}
@@ -151,7 +156,7 @@ pip install -r ../requirements.txt
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org97d3ce1}]{実践：プログラム作成}
+\begin{frame}[label={sec:orge06c5d7}]{実践：プログラム作成}
 HTML 取得
 \begin{itemize}
 \item urllib.request.urlopen()
@@ -165,8 +170,8 @@ HTML 解析
 \end{frame}
 
 \section{最後に}
-\label{sec:org6c7502d}
-\begin{frame}[label={sec:org715f59d}]{最後に}
+\label{sec:orge8a209d}
+\begin{frame}[label={sec:org0654303}]{最後に}
 GitHub: 
 \end{frame}
 \end{document}
