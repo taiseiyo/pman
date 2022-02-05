@@ -1,4 +1,4 @@
-% Created 2022-02-05 Sat 17:19
+% Created 2022-02-05 Sat 18:10
 % Intended LaTeX compiler: pdflatex
 \documentclass[compress,dvipdfmx,11pt]{beamer}
 \usepackage[utf8]{inputenc}
@@ -41,8 +41,8 @@
 \newcommand{\Imat}{\mathbf I}
 
 \section{概要}
-\label{sec:org03770a9}
-\begin{frame}[label={sec:org8821d8e}]{Python とは？}
+\label{sec:org62d6f74}
+\begin{frame}[label={sec:orge5ac36d}]{Python とは？}
 Python(パイソン)はオブジェクト指向のプログラミング言語であり、手軽に始
 める事ができ実用的な本格的なプログラムの開発を行う事が可能
 
@@ -55,12 +55,12 @@ Python(パイソン)はオブジェクト指向のプログラミング言語で
 
 
 本日のソース一式
-→ git clone \url{https://github.com/taiseiyo/pman/tree/debian}
+→ git clone \url{https://github.com/taiseiyo/pman.git}
 \end{frame}
 
 \section{Python 環境作成}
-\label{sec:org2865368}
-\begin{frame}[label={sec:orgee2dd4b},fragile]{Python 導入：apt install を使う(Debian)}
+\label{sec:org17e54c9}
+\begin{frame}[label={sec:org2364cbc},fragile]{Python 導入：apt install を使う(Debian)}
  メリット
 \begin{itemize}
 \item インストールが簡単
@@ -86,7 +86,7 @@ cat /etc/os-release or cat /etc/debian_version
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org4f0116a},fragile]{Python 導入：source からビルド}
+\begin{frame}[label={sec:org1002e9e},fragile]{Python 導入：source からビルド}
  メリット
 \begin{itemize}
 \item 最新バージョンが手に入る
@@ -109,8 +109,8 @@ sudo make altinstall
 
 
 \section{pman command}
-\label{sec:orgea73a93}
-\begin{frame}[label={sec:org2661e00}]{pman コマンド}
+\label{sec:org75031ef}
+\begin{frame}[label={sec:orge536224}]{pman コマンド}
 発想
 \begin{itemize}
 \item Debian なら man コマンドがあるが、同じ事を Python でも行いたい
@@ -126,8 +126,8 @@ sudo make altinstall
 
 
 \section{実践(ハンズオン)}
-\label{sec:orga410a29}
-\begin{frame}[label={sec:org0be2311},fragile]{実践：必要なモジュール}
+\label{sec:org97355ac}
+\begin{frame}[label={sec:orgb2bb603},fragile]{実践：必要なモジュール}
  \begin{itemize}
 \item beautifulsoup4
 \begin{itemize}
@@ -147,10 +147,11 @@ python -m venv test
 cd test
 source bin/activate
 pip install -r ../requirements.txt
+# 作業終了後 deactivate
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org6286c03}]{実践：プログラム作成}
+\begin{frame}[label={sec:org97d3ce1}]{実践：プログラム作成}
 HTML 取得
 \begin{itemize}
 \item urllib.request.urlopen()
@@ -164,8 +165,8 @@ HTML 解析
 \end{frame}
 
 \section{最後に}
-\label{sec:org7907de8}
-\begin{frame}[label={sec:orgb506614}]{最後に}
+\label{sec:org6c7502d}
+\begin{frame}[label={sec:org715f59d}]{最後に}
 GitHub: 
 \end{frame}
 \end{document}

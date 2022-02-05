@@ -37,7 +37,7 @@ https://www.tiobe.com/tiobe-index/
 
 
 本日のソース一式
-→ git clone https://github.com/taiseiyo/pman/tree/debian
+→ git clone https://github.com/taiseiyo/pman.git
 
 * Python 環境作成
 ** Python 導入：apt install を使う(Debian)
@@ -102,6 +102,7 @@ pman 作成の環境構築($/pman/prog/$ の想定)
   cd test
   source bin/activate
   pip install -r ../requirements.txt
+  # 作業終了後 deactivate
 #+end_src
 
 ** 実践：プログラム作成
