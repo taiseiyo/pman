@@ -1,4 +1,6 @@
 beautifulsoup4==4.10.0
 bs4==0.0.1
 lxml==4.7.1
+plumbum==1.7.2
+pyfzf==0.2.2
 soupsieve==2.3.1
