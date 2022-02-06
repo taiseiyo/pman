@@ -3,7 +3,7 @@
 # Copyright (c) 2020, Suzuki Taisei.
 # All rights reserved.
 #
-# $Id: pman.py,v 1.32 2020/03/25 07:50:31 suzuki
+# $Id: pman.py,v 1.32 2022/02/01 07:50:31 suzuki
 
 import urllib.request
 from bs4 import BeautifulSoup
