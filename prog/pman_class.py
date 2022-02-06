@@ -26,9 +26,8 @@ class Python_module_manual(object):
 
 
 class Python_function_manual(Python_module_manual):
-    def __init__(self, name):
-        self.url = furl + "#" + name
-        self.html = urllib.request.urlopen(self.url)
+    def __init__(self):
+        self.html = urllib.request.urlopen(furl)
 
 
 def option_parser():
@@ -36,7 +35,7 @@ def option_parser():
     parser.add_argument(
         '-m', '--module', help='choose python module')
     parser.add_argument(
-        '-f', '--function', help='choose python function')
+        '-f', '--function', action="store_true", help='choose python function')
     option = parser.parse_args()
     return option
 
@@ -44,7 +43,7 @@ def option_parser():
 def main():
     opt = option_parser()
     manual = Python_module_manual(opt.module)\
-        if opt.module else Python_function_manual(opt.function) if opt.function else None
+        if opt.module else Python_function_manual() if opt.function else None
     manual.printer() if opt.module or opt.function else None
 
 
