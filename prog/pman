@@ -7,7 +7,7 @@ exe(){
     rm $file
 }
 
-path=~/"your path"/pman_func.py
+path=pman_fzf.py
 arg=$1;shift
 module_name=$1;shift
 exe $arg $module_name

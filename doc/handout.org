@@ -24,8 +24,8 @@
 * 概要
 ** Python とは？
 
-Python(パイソン)はオブジェクト指向のプログラミング言語であり、手軽に始
-める事ができ実用的な本格的なプログラムの開発を行う事が可能
+Python(パイソン)はオブジェクト指向のプログラミング言語であり、 *手軽に
+始める事ができ実用的な本格的なプログラムの開発を行う事が可能*
 
 
 言語ランキング(TIOBE Software 調べ)：1位
@@ -86,7 +86,7 @@ cat /etc/os-release or cat /etc/debian_version
 ** pman コマンド
 発想
 - Debian なら man コマンドがあるが、同じ事を Python でも行いたい
-- いつでもモジュールのマニュアルが欲しい
+- いつでもモジュールの *マニュアルが欲しい*
 
 手法
 1. Python 公式サイトから標準ライブラリのデータ(HTML)を取得
@@ -113,14 +113,13 @@ pman 作成の環境構築($/pman/prog/$ の想定)
 
 ** 実践：プログラム作成
 HTML 取得
-  - urllib.request.urlopen()
-  
+  - urllib.request.urlopen(url)
 
 HTML 解析
   - BeautifulSoup()
-    
+    - get _ text() 
 
-ソースコード
+ソースコード(*batcat* 使うと見やすい)
   - 関数を使って実装:  [[./prog/pman_func.py]]
   - クラスを使って実装: [[./prog/pman_class.py]]
 
@@ -130,10 +129,15 @@ emacs との組み合わせ
 - emacs と組み合わせる事でエディタ上で Python Manual を見る事ができる
   - ソースコード: [[./prog/pman.el]]
 
+モジュールの検索を簡単にする
+- fzf を扱って簡単にモジュールを見つけやすくする
+  - ソースコード: [[./prog/pman_fzf.py]]
+    
 結果の表示を見やすく
 - HTML から文字列を取得しただけでは空白等が多く見にくいので Shell
   Script(bash)を書いて結果を見やすく
   - ソースコード:  [[./prog/pman]]
+
 
   
 * 最後に
