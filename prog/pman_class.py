@@ -22,10 +22,7 @@ class Python_module_manual(object):
 
     def printer(self):
         target = BeautifulSoup(self.html.read(), "lxml")
-        text_data = str("")
-        for text in (target.find_all(text=True)):
-            text_data = text_data + text
-        print(text_data.strip())
+        print(target.get_text().strip())
 
 
 class Python_function_manual(Python_module_manual):
