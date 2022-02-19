@@ -5,7 +5,7 @@ cd test_install
 wget https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tar.xz
 tar Jxfv Python-3.10.2.tar.xz
 ./Python-3.10.2/configure
-# ディレクトリの python が使用可能になる
+# ディレクトリ(Python-3.10.2)の python が使用可能になる
 sudo make
 # PATH が通っている所の Python を置き変える場合
 # sudo make altinstall
