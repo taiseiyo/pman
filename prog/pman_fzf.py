@@ -27,8 +27,12 @@ def option_parser():
 
 
 def html_parser(url):
-    with urllib.request.urlopen(url) as response:
-        html = response.read()
+    try:
+        with urllib.request.urlopen(url) as response:
+            html = response.read()
+    except urllib.error.HTTPError:
+        print("公式に参照できるページがありません")
+        exit()
     return BeautifulSoup(html, "lxml")
 
 
