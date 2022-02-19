@@ -9,6 +9,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 import time
 import argparse
+import requests
 import subprocess
 
 murl = "https://docs.python.org/ja/3/library/"
@@ -28,6 +29,9 @@ def option_parser():
 def html_parser(url):
     response = urllib.request.urlopen(url)
     html = response.read()
+    # response = requests.get(url)
+    # response.encoding = response.apparent_encoding
+    # html = response.text
     soup = BeautifulSoup(html, "lxml")
     print(soup.get_text().strip())
 
