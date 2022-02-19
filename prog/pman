@@ -3,7 +3,9 @@
 exe(){
     file=$(mktemp)
     python3 $path $1 $2 > $file
-    cat -s $file 
+    cat -s $file  | less
+    # cat -s $file  | sponge $file
+    # batcat $file
     rm $file
 }
 
