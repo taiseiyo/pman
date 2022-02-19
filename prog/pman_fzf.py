@@ -9,6 +9,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 import time
 import argparse
+import requests
 import subprocess
 from pyfzf.pyfzf import FzfPrompt
 
@@ -30,6 +31,9 @@ def html_parser(url):
     try:
         with urllib.request.urlopen(url) as response:
             html = response.read()
+        # response = requests.get(url)
+        # response.encoding = response.apparent_encoding
+        # html = response.text
     except urllib.error.HTTPError:
         print("公式に参照できるページがありません")
         exit()
