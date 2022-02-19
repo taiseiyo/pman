@@ -39,7 +39,7 @@ def html_parser(url):
 def main():
     opt = option_parser()
     if(opt.module):
-        url_behind = opt.module + ".html" if opt.module else None
+        url_behind = opt.module + ".html"
         url = murl + url_behind
         html_parser(url)
     elif(opt.function):
